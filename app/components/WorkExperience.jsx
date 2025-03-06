@@ -8,20 +8,13 @@ export default function WorkExperience() {
     // Data for work experiences
     const experiences = [
         {
-            title: "Senior Frontend Developer",
-            company: "Tech Innovations Inc.",
-            period: "2022 - Presente",
+            title: "Software Engineer & Data Analyst",
+            company: "GRASP SPAIN",
+            period: "2023 - Presente",
             description:
-                "Lideré el desarrollo de aplicaciones web utilizando React y Next.js, implementando arquitecturas escalables y optimizando el rendimiento. Colaboré estrechamente con el equipo de diseño para crear interfaces de usuario intuitivas y accesibles. Mentoreé a desarrolladores junior y participé en la toma de decisiones técnicas.",
-            technologies: [
-                "React",
-                "Next.js",
-                "TypeScript",
-                "Tailwind CSS",
-                "Redux",
-                "GraphQL",
-            ],
-            image: "/window.svg", // Usando una imagen de ejemplo
+                "Involucrado en varios proyectos de preparacion y procesamiento de datos satelitales. Desarrollo del primer simulador de imagenes por satelite.",
+            technologies: ["Python", "Remote Sensing", "Streamlit", "Docker"],
+            image: "/grasp.png",
         },
         {
             title: "Desarrollador Full Stack",
@@ -40,8 +33,8 @@ export default function WorkExperience() {
             image: "/globe.svg", // Usando una imagen de ejemplo
         },
         {
-            title: "Desarrollador Web Junior",
-            company: "WebCraft Studios",
+            title: "Ingeniero de Investigacion",
+            company: "Universidad de Valladolid (UVa)",
             period: "2017 - 2019",
             description:
                 "Participé en el desarrollo de sitios web responsivos, implementando interfaces de usuario según los diseños proporcionados. Colaboré en la resolución de bugs y en la mejora de la experiencia de usuario. Aprendí y apliqué las mejores prácticas en desarrollo web.",
@@ -53,7 +46,7 @@ export default function WorkExperience() {
                 "WordPress",
                 "jQuery",
             ],
-            image: "/file.svg", // Usando una imagen de ejemplo
+            image: "/uva.png",
         },
     ];
 

@@ -8,18 +8,7 @@ import Link from "next/link";
 export default function Header() {
     // Developer information
     const developerName = "Goyo Cancio";
-
-    // Navigation links
-    const navLinks = [
-        {
-            name: "Experiencia",
-            href: "#experience",
-        },
-        {
-            name: "Proyectos",
-            href: "#projects",
-        },
-    ];
+    const jobTitle = "Software Engineer";
 
     // Social media links
     const socialLinks = [
@@ -45,35 +34,27 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-gray-200/10 py-4 px-6 md:px-12">
-            <div className="container mx-auto flex flex-wrap items-center justify-between">
+            <div className="container mx-auto flex items-center justify-between">
                 {/* Left section: Profile picture and name */}
                 <div className="flex items-center gap-4">
                     <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden">
                         <Image
-                            src="/profile.svg"
+                            src="/profile.png"
                             alt="Profile picture"
                             fill
                             className="object-cover"
                             priority
                         />
                     </div>
-                    <h1 className="text-xl md:text-2xl font-bold">
-                        {developerName}
-                    </h1>
+                    <div className="flex flex-col">
+                        <h1 className="text-lg md:text-xl font-bold leading-tight">
+                            {developerName}
+                        </h1>
+                        <p className="text-sm md:text-base text-foreground/70">
+                            {jobTitle}
+                        </p>
+                    </div>
                 </div>
-
-                {/* Middle section: Navigation */}
-                <nav className="hidden md:flex items-center space-x-8">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-foreground/70 hover:text-foreground font-medium transition-colors"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                </nav>
 
                 {/* Right section: Social media links */}
                 <div className="flex items-center space-x-4">
