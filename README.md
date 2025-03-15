@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mi Portfolio Web Personal
 
-## Getting Started
+Este es mi portfolio web personal desarrollado con [Next.js](https://nextjs.org), un framework de React que ofrece renderizado del lado del servidor, generación de sitios estáticos y muchas otras características útiles.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Diseño Responsivo:** Experiencia de usuario perfecta en todos los dispositivos
+-   **Secciones Personalizables:** Presentación, proyectos, habilidades, experiencia y contacto
+-   **Rendimiento Optimizado:** Carga rápida y experiencia fluida
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías Utilizadas
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   **Frontend:** Next.js, React, CSS Modules/Tailwind CSS
+-   **Despliegue:** Vercel
+-   **Otros:** Herramientas de optimización de imágenes, fuentes personalizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Comenzando
 
-## Learn More
+Para ejecutar este proyecto en tu entorno local:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clona este repositorio
+2. Instala las dependencias:
+    ```bash
+    npm install
+    # o
+    yarn install
+    ```
+3. Inicia el servidor de desarrollo:
+    ```bash
+    npm run dev
+    # o
+    yarn dev
+    # o
+    pnpm dev
+    # o
+    bun dev
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Personalización
 
-## Deploy on Vercel
+Para personalizar este portfolio:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Actualiza la información personal en los archivos de contenido
+2. Modifica los estilos en los archivos CSS/Tailwind correspondientes
+3. Añade tus propios proyectos en la sección de proyectos
+4. Personaliza las imágenes y recursos en la carpeta `public`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Más Información sobre Next.js
+
+Para aprender más sobre Next.js:
+
+-   [Documentación de Next.js](https://nextjs.org/docs) - aprende sobre las características y API de Next.js.
+-   [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
+
+## Despliegue en Vercel
+
+La forma más sencilla de desplegar tu aplicación Next.js es utilizar la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), creada por los desarrolladores de Next.js.
+
+Consulta nuestra [documentación de despliegue de Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para más detalles.
+
+## Licencia
+
+MIT
+
+## Proximos pasos
+
+-   Optimizar la visualizacion en dispositivos moviles
+-   Probar con diferentes estilos/temas
+-   Modificar los logos de las empresas
+-   Agregar una landing page a un proyecto y experimentar con la redireccion a subdominios
