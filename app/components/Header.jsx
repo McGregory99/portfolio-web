@@ -33,11 +33,11 @@ export default function Header() {
     ];
 
     return (
-        <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b border-gray-200/10 py-4 px-6 md:px-12">
+        <header className="sticky top-0 z-10 bg-white border-b border-gray-200 py-4 px-6 md:px-12">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Left section: Profile picture and name */}
                 <div className="flex items-center gap-4">
-                    <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden">
+                    <div className="relative w-20 h-20 md:w-30 md:h-30 rounded-full overflow-hidden">
                         <Image
                             src="/profile.png"
                             alt="Profile picture"
@@ -47,17 +47,17 @@ export default function Header() {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <h1 className="text-lg md:text-xl font-bold leading-tight">
+                        <h1 className="text-2xl md:text-4xl font-bold leading-tight">
                             {developerName}
                         </h1>
-                        <p className="text-sm md:text-base text-foreground/70">
+                        <p className="text-lg md:text-xl text-foreground/70">
                             {jobTitle}
                         </p>
                     </div>
                 </div>
 
                 {/* Right section: Social media links */}
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-6">
                     {socialLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -72,7 +72,7 @@ export default function Header() {
                                 alt={link.alt}
                                 width={24}
                                 height={24}
-                                className="w-6 h-6 md:w-7 md:h-7"
+                                className="w-9 h-9 md:w-12 md:h-12"
                             />
                         </Link>
                     ))}

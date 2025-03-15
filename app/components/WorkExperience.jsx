@@ -10,43 +10,49 @@ export default function WorkExperience() {
         {
             title: "Software Engineer & Data Analyst",
             company: "GRASP SPAIN",
-            period: "2023 - Presente",
+            period: "Sep. 2023 - Presente",
             description:
-                "Involucrado en varios proyectos de preparacion y procesamiento de datos satelitales. Desarrollo del primer simulador de imagenes por satelite.",
+                "Desarrollo de una aplicación web para la generación de medidas sintéticas de satélites en el marco de un proyecto NEOTEC financiado por el CDTI. Responsable de varias tareas de preparación y procesamiento de datos satelitales críticos para la observación terrestre, implementando soluciones técnicas innovadoras que optimizan la calidad y utilidad de la información geoespacial obtenida.",
+            projects: [
+                "Simulador de medidas de instrumentos satelitales",
+                "Preparacion y procesamiento de datos geoespaciales (S5P, OLCI, Sentinel-2...)",
+            ],
             technologies: ["Python", "Remote Sensing", "Streamlit", "Docker"],
-            image: "/grasp.png",
+            image: "/company_logo/grasp.png",
         },
         {
-            title: "Desarrollador Full Stack",
-            company: "Digital Solutions",
-            period: "2019 - 2022",
+            title: "Analista en Prácticas",
+            company: "KPMG",
+            period: "Mar. 2023 - Ago. 2023",
             description:
-                "Desarrollé y mantuve aplicaciones web y móviles utilizando tecnologías modernas. Implementé funcionalidades tanto en el frontend como en el backend, colaborando con equipos multidisciplinarios en metodologías ágiles. Optimicé el rendimiento de las aplicaciones y resolví problemas complejos.",
+                "Colaboración con el departamento de Estrategia (Technology Enablement) participando en proyectos de desarrollo y transformación digital para clientes corporativos. Esta experiencia me permitió adquirir una visión global del ciclo de vida de proyectos tecnológicos en entornos corporativos, decidiendo posteriormente orientar mi carrera hacia equipos más pequeños, donde pudiera tener mayor impacto directo en el desarrollo.",
             technologies: [
-                "JavaScript",
-                "Node.js",
-                "React",
-                "MongoDB",
-                "Express",
-                "Docker",
+                "Quality Assurance",
+                "Documentación Técnica",
+                "Presentaciones Ejecutivas",
+                "Consultoría Tecnológica",
             ],
-            image: "/globe.svg", // Usando una imagen de ejemplo
+            image: "/company_logo/kpmg.png",
         },
         {
-            title: "Ingeniero de Investigacion",
+            title: "Ingeniero de Investigación en Visión Artificial",
             company: "Universidad de Valladolid (UVa)",
-            period: "2017 - 2019",
+            period: "Nov. 2021 - Mar. 2023",
             description:
-                "Participé en el desarrollo de sitios web responsivos, implementando interfaces de usuario según los diseños proporcionados. Colaboré en la resolución de bugs y en la mejora de la experiencia de usuario. Aprendí y apliqué las mejores prácticas en desarrollo web.",
-            technologies: [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "PHP",
-                "WordPress",
-                "jQuery",
+                "Desarrollé sistemas de visión artificial aplicados a mantenimiento predictivo industrial y soluciones IoT. Implementé un sistema de detección de variaciones de longitud en cintas transportadoras utilizando algoritmos de IA para predecir posibles averías. También lideré el desarrollo de un prototipo contador de visitantes para eventos en espacios abiertos basado en visión artificial y componentes IoT, logrando una solución innovadora y eficiente.",
+            projects: [
+                "Sistema de prevencion de roturas en cintas transportadoras",
+                "Prototipo contador de visitantes para eventos en espacios abiertos",
             ],
-            image: "/uva.png",
+            technologies: [
+                "Python",
+                "Computer Vision",
+                "IoT",
+                "Inteligencia Artificial",
+                "Ciencia de Datos",
+                "Machine Learning",
+            ],
+            image: "/company_logo/uva.png",
         },
     ];
 
@@ -58,12 +64,10 @@ export default function WorkExperience() {
                         Experiencia Laboral
                     </h2>
                     <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
-                    <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
+                    {/* <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
                         Mi trayectoria profesional incluye experiencia en
-                        desarrollo frontend, backend y tecnologías full-stack,
-                        trabajando en proyectos variados y colaborando con
-                        equipos multidisciplinarios.
-                    </p>
+                        ...
+                    </p> */}
                 </div>
 
                 <div className="space-y-8">

@@ -5,8 +5,15 @@ import Image from "next/image";
  * Displays a single work experience block with image, title, description and technologies
  */
 export default function ExperienceItem({ experience }) {
-    const { title, company, period, description, technologies, image } =
-        experience;
+    const {
+        title,
+        company,
+        period,
+        description,
+        projects,
+        technologies,
+        image,
+    } = experience;
 
     return (
         <div className="flex flex-col md:flex-row gap-6 mb-12 p-6 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
@@ -25,16 +32,39 @@ export default function ExperienceItem({ experience }) {
             {/* Text block on the right */}
             <div className="flex-grow">
                 {/* Job title and company name */}
-                <div className="mb-2">
-                    <h3 className="text-xl font-bold">{title}</h3>
+                <div className="mb-5 md:mt-5">
+                    <h3 className="text-lg md:text-xl font-bold">{title}</h3>
                     <div className="flex justify-between flex-wrap">
-                        <p className="text-lg text-gray-300">{company}</p>
+                        <p className="text-lg md:text-xl text-gray-400">
+                            {company}
+                        </p>
                         <p className="text-sm text-gray-400">{period}</p>
                     </div>
                 </div>
 
                 {/* Description */}
-                <p className="mb-4 text-gray-300">{description}</p>
+                <p className="mb-6 text-gray-500 text-sm md:text-base text-justify">
+                    {description}
+                </p>
+
+                {/* Projects list */}
+                {projects && projects.length > 0 && (
+                    <div className="mb-6">
+                        <h4 className="text-sm font-semibold mb-2 text-gray-400">
+                            Proyectos:
+                        </h4>
+                        <ul className="list-disc pl-5 text-gray-500">
+                            {projects.map((project, index) => (
+                                <li
+                                    key={index}
+                                    className="mb-1 hover:text-gray-300 transition-colors"
+                                >
+                                    {project}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
 
                 {/* Technologies list */}
                 <div>
@@ -45,7 +75,7 @@ export default function ExperienceItem({ experience }) {
                         {technologies.map((tech, index) => (
                             <span
                                 key={index}
-                                className="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-xs hover:bg-gray-700 transition-colors"
+                                className="px-3 py-1 bg-gray-800 text-gray-200 rounded-full text-sm hover:bg-gray-700 transition-colors"
                             >
                                 {tech}
                             </span>
