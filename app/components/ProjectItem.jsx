@@ -19,7 +19,7 @@ export default function ProjectItem({ project }) {
             rel="noopener noreferrer"
             className="block transform transition-transform hover:scale-110 duration-200"
         >
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden bg-white shadow-md">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden bg-base-100 shadow-md">
                 {/* Loading skeleton */}
                 {isLoading && (
                     <div className="absolute inset-0 animate-pulse bg-gray-200"></div>

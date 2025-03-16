@@ -14,26 +14,26 @@ export default function Header() {
     const socialLinks = [
         {
             name: "LinkedIn",
-            icon: "/linkedin.svg",
+            icon: "/social/linkedin.svg",
             url: "https://linkedin.com/in/goyocancio",
             alt: "LinkedIn Profile",
         },
         {
             name: "GitHub",
-            icon: "/github.svg",
+            icon: "/social/github.svg",
             url: "https://github.com/McGregory99",
             alt: "GitHub Profile",
         },
         {
             name: "X",
-            icon: "/x.svg",
+            icon: "/social/x.svg",
             url: "https://x.com/goyo_is_a_dev",
             alt: "X Profile",
         },
     ];
 
     return (
-        <header className="sticky top-0 z-10 bg-white border-b border-gray-200 py-4 px-6 md:px-12">
+        <header className="sticky top-0 z-10 border-b border-gray-200 py-4 px-6 md:px-12">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Left section: Profile picture and name */}
                 <div className="flex items-center gap-4">

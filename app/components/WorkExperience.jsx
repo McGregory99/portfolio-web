@@ -63,7 +63,7 @@ export default function WorkExperience() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                         Experiencia Laboral
                     </h2>
-                    <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                    <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
                     {/* <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
                         Mi trayectoria profesional incluye experiencia en
                         ...

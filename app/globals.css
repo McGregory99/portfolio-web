@@ -1,63 +1,30 @@
 @import "tailwindcss";
 
-@theme {
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+@plugin "daisyui" {
+    themes: emerald --default;
 }
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
-    --primary: #3b82f6; /* Color primario - azul */
-    --primary-light: #93c5fd;
-    --secondary: #10b981; /* Color secundario - verde */
-    --accent: #8b5cf6; /* Color de acento - púrpura */
-}
-
-@media (prefers-color-scheme: dark) {
+/* Configuración de fuentes */
+@layer base {
     :root {
-        --background: #0f172a; /* Azul oscuro para dark mode */
-        --foreground: #f1f5f9;
-        --primary: #3b82f6;
-        --primary-light: #60a5fa;
-        --secondary: #10b981;
-        --accent: #a78bfa;
+        --font-sans: var(--font-geist-sans);
+        --font-mono: var(--font-geist-mono);
+    }
+
+    body {
+        @apply font-sans antialiased;
+        @apply transition-colors duration-200;
     }
 }
 
-body {
-    color: var(--foreground);
-    background: var(--background);
-    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+/* Clases personalizadas reutilizables */
+@layer components {
+    .animate-fadeIn {
+        animation: fadeIn 0.6s ease-out;
+    }
 }
 
-/* Estilos para transiciones suaves */
-* {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 150ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Scrollbar personalizado */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-light);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary);
-}
-
-/* Animaciones */
+/* Animaciones globales */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -67,8 +34,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.animate-fadeIn {
-    animation: fadeIn 0.6s ease-out;
 }

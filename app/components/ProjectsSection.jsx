@@ -8,7 +8,7 @@ export default function ProjectsSection() {
     // Sample project data
     const projects = [
         {
-            image: "/esmimascota.png",
+            image: "/projects_logo/esmimascota.png",
             subdomain: "esmimascota",
         },
         {
@@ -36,17 +36,23 @@ export default function ProjectsSection() {
     return (
         <section id="projects" className="py-12">
             <div className="container mx-auto px-8 py-8">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8">
-                    Proyectos
-                </h2>
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        Proyectos
+                    </h2>
+                    <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
 
-                <p className="mb-8 text-gray-600 dark:text-gray-400 max-w-3xl">
-                    En mi tiempo libre, desarrollo aplicaciones innovadoras
-                    centradas en la salud y la inteligencia artificial,
-                    incluyendo soluciones para el Apple Watch y agentes de IA
-                    para distintas plataformas. Puedes descubrir más sobre mis
-                    proyectos en mi web. Mi mail está siempre abierto para
-                    nuevas oportunidades y colaboraciones.
+                <p className="mb-8 text-base-content max-w-3xl">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam, quos. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
+                    elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+                    Fusce nec tellus sed augue semper porta. Mauris massa.
+                    Vestibulum lacinia arcu eget nulla. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos
+                    himenaeos. Curabitur sodales ligula in libero. Sed dignissim
                 </p>
 
                 {/* Projects row */}
