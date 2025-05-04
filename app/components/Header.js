@@ -30,14 +30,20 @@ export default function Header() {
             url: "https://x.com/goyo_is_a_dev",
             alt: "X Profile",
         },
+        {
+            name: "YouTube",
+            icon: "/social/youtube.svg",
+            url: "https://www.youtube.com/@goyo_is_a_dev",
+            alt: "YouTube Channel",
+        },
     ];
 
     return (
-        <header className="sticky top-0 z-10 border-b border-gray-200 py-4 px-6 md:px-12">
+        <header className="border-b border-accent-yellow py-4 px-6 md:px-12">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Left section: Profile picture and name */}
                 <div className="flex items-center gap-4">
-                    <div className="relative w-20 h-20 md:w-30 md:h-30 rounded-full overflow-hidden">
+                    <div className="relative w-20 h-20 md:w-30 md:h-30 rounded-full overflow-hidden border border-white shadow-xl">
                         <Image
                             src="/profile.png"
                             alt="Profile picture"
@@ -72,7 +78,7 @@ export default function Header() {
                                 alt={link.alt}
                                 width={24}
                                 height={24}
-                                className="w-9 h-9 md:w-12 md:h-12"
+                                className="md:w-7 md:h-7"
                             />
                         </Link>
                     ))}

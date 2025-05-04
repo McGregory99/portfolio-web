@@ -16,10 +16,10 @@ export default function ExperienceItem({ experience }) {
     } = experience;
 
     return (
-        <div className="flex flex-col md:flex-row gap-6 mb-12 p-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+        <div className="flex flex-col md:flex-row gap-6 my-10 px-8 py-6 rounded-2xl shadow-2xl hover:shadow-lg hover:-translate-y-1 bg-gradient-to-br from-white via-[#f9fafb] to-[#f1f5f9]">
             {/* Company/Job image - rounded and positioned at the top left */}
             <div className="flex-shrink-0">
-                <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gray-200/20 shadow-inner">
+                <div className="relative w-24 h-24 rounded-2xl overflow-hidden">
                     <Image
                         src={image}
                         alt={`${company} logo`}
@@ -73,7 +73,10 @@ export default function ExperienceItem({ experience }) {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                         {technologies.map((tech, index) => (
-                            <span key={index} className="badge badge-secondary">
+                            <span
+                                key={index}
+                                className="bg-foreground text-accent rounded-full px-4 py-1 text-sm font-bold"
+                            >
                                 {tech}
                             </span>
                         ))}
