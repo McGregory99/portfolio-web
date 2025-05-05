@@ -63,7 +63,7 @@ export default function Header() {
                 </div>
 
                 {/* Right section: Social media links */}
-                <div className="flex items-center gap-3 md:gap-5">
+                <div className="flex items-center gap-3">
                     {socialLinks.map((link) => (
                         <Link
                             key={link.name}
