@@ -16,7 +16,7 @@ export default function ExperienceItem({ experience }) {
     } = experience;
 
     return (
-        <div className="flex flex-row gap-6 m-5 px-5 py-3 md:my-10 md:px-8 md:py-6 rounded-2xl shadow-2xl hover:shadow-lg hover:-translate-y-1 bg-gradient-to-br from-white via-[#f9fafb] to-[#f1f5f9]">
+        <div className="flex flex-row gap-6 m-5 px-5 py-3 md:my-10 md:px-8 md:py-6 rounded-2xl shadow-2xl hover:shadow-lg hover:-translate-y-1 bg-gradient-to-br from-white via-gray-100 to-gray-200 border border-gray-200">
             {/* Company/Job image - rounded and positioned at the top left */}
             <div className="flex-shrink-0">
                 <div className="relative w-12 h-12 md:w-24 md:h-24 rounded-lg md:rounded-2xl overflow-hidden">

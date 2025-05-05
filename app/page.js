@@ -56,29 +56,25 @@ export default function Home() {
     // Sample project data
     const projects = [
         {
-            image: "/projects_logo/esmimascota.png",
-            subdomain: "esmimascota",
+            image: "/projects_logo/blockheadapp.png",
+            domain: "https://blockheadapp.com",
         },
-        {
-            image: "/window.svg",
-            subdomain: "taskmanager",
-        },
-        {
-            image: "/globe.svg",
-            subdomain: "travelblog",
-        },
-        {
-            image: "/file.svg",
-            subdomain: "weatherapp",
-        },
-        {
-            image: "/window.svg",
-            subdomain: "portfolio",
-        },
-        {
-            image: "/globe.svg",
-            subdomain: "chatapp",
-        },
+        // {
+        //     image: "/projects_logo/blockheadapp.png",
+        //     domain: "https://taskmanager.goyocancio.es",
+        // },
+        // {
+        //     image: "/projects_logo/blockheadapp.png",
+        //     domain: "https://travelblog.goyocancio.es",
+        // },
+        // {
+        //     image: "/projects_logo/blockheadapp.png",
+        //     domain: "https://weatherapp.goyocancio.es",
+        // },
+        // {
+        //     image: "/projects_logo/blockheadapp.png",
+        //     domain: "https://portfolio.goyocancio.es",
+        // },
     ];
 
     return (
@@ -107,45 +103,42 @@ export default function Home() {
 
             {/* Projects Section */}
             <section id="projects">
-                <div className="container mx-auto">
-                    <div className="text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold">
-                            Proyectos
+                <div className="container mx-auto py-12 px-10">
+                    <div className="text-center mb-6">
+                        <h2 className="text-2xl md:text-4xl font-bold">
+                            Proyectos Personales
                         </h2>
                     </div>
 
-                    <p className="text-base-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Quisquam, quos. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Integer nec odio. Praesent
-                        libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
-                        quis sem at nibh elementum imperdiet. Duis sagittis
-                        ipsum. Praesent mauris. Fusce nec tellus sed augue
-                        semper porta. Mauris massa. Vestibulum lacinia arcu eget
-                        nulla. Class aptent taciti sociosqu ad litora torquent
-                        per conubia nostra, per inceptos himenaeos. Curabitur
-                        sodales ligula in libero. Sed dignissim
+                    <p className="text-xs md:text-base mb-2 text-justify">
+                        De manera paralela a los trabajos que he ido
+                        desempeñando, he desarrollado varios proyectos
+                        personales tanto para probarme a mí mismo y ver de qué
+                        soy capaz, como para aplicar mis conocimientos y
+                        aprender nuevas tecnologías.
+                    </p>
+                    <p className="text-xs md:text-base mb-8  text-justify">
+                        Aquí puedes ver algunos de ellos:
                     </p>
 
                     {/* Projects row */}
-                    <div className="flex flex-wrap gap-6 md:gap-8 justify-start">
-                        {projects.map((project, index) => (
-                            <div
-                                key={index}
-                                className="opacity-0 animate-fadeIn"
-                                style={{
-                                    animationDelay: `${index * 100}ms`,
-                                    animationFillMode: "forwards",
-                                }}
-                            >
-                                <ProjectItem project={project} />
-                            </div>
-                        ))}
+                    <div className="flex flex-wrap gap-6 md:gap-8 justify-center">
+                        {/* Restore the map */}
+                        {projects.map((project, index) => {
+                            if (!project || !project.image || !project.domain) {
+                                return null; // Keep the check and null return
+                            }
+                            return (
+                                <div key={index} className="">
+                                    <ProjectItem project={project} />
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
-            <footer className="text-center text-sm text-gray-500">
+            <footer className="text-center text-xs md:text-sm text-gray-500">
                 © {new Date().getFullYear()} Goyo Cancio. Todos los derechos
                 reservados.
             </footer>
