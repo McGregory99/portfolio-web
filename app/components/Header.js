@@ -39,11 +39,11 @@ export default function Header() {
     ];
 
     return (
-        <header className="border-b border-accent-yellow py-4 px-6 md:px-12">
+        <header className="border-b border-accent-yellow py-4 px-2 md:px-6">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Left section: Profile picture and name */}
-                <div className="flex items-center gap-4">
-                    <div className="relative w-20 h-20 md:w-30 md:h-30 rounded-full overflow-hidden border border-white shadow-xl">
+                <div className="flex items-center gap-2 md:gap-8">
+                    <div className="relative w-15 h-15 md:w-30 md:h-30 rounded-full overflow-hidden border border-white shadow-xl">
                         <Image
                             src="/profile.png"
                             alt="Profile picture"
@@ -53,17 +53,17 @@ export default function Header() {
                         />
                     </div>
                     <div className="flex flex-col">
-                        <h1 className="text-2xl md:text-4xl font-bold leading-tight">
+                        <h1 className="text-lg md:text-4xl font-bold leading-tight">
                             {developerName}
                         </h1>
-                        <p className="text-lg md:text-xl text-foreground/70">
+                        <p className="text-sm md:text-xl text-foreground/70">
                             {jobTitle}
                         </p>
                     </div>
                 </div>
 
                 {/* Right section: Social media links */}
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center gap-3 md:gap-5">
                     {socialLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -78,7 +78,7 @@ export default function Header() {
                                 alt={link.alt}
                                 width={24}
                                 height={24}
-                                className="md:w-7 md:h-7"
+                                className="w-6 h-6 md:w-8 md:h-8"
                             />
                         </Link>
                     ))}
