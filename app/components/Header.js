@@ -18,12 +18,12 @@ export default function Header() {
             url: "https://linkedin.com/in/goyocancio",
             alt: "LinkedIn Profile",
         },
-        {
-            name: "GitHub",
-            icon: "/social/github.svg",
-            url: "https://github.com/McGregory99",
-            alt: "GitHub Profile",
-        },
+        // {
+        //     name: "GitHub",
+        //     icon: "/social/github.svg",
+        //     url: "https://github.com/McGregory99",
+        //     alt: "GitHub Profile",
+        // },
         {
             name: "X",
             icon: "/social/x.svg",

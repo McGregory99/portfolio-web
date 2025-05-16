@@ -18,20 +18,20 @@ export default function Home() {
             technologies: ["Python", "Remote Sensing", "Streamlit", "Docker"],
             image: "/company_logo/grasp.png",
         },
-        // {
-        //     title: "Analista en Prácticas",
-        //     company: "KPMG",
-        //     period: "Mar. 2023 - Ago. 2023",
-        //     description:
-        //         "Colaboración con el departamento de Estrategia (Technology Enablement) participando en proyectos de desarrollo y transformación digital para clientes corporativos. Esta experiencia me permitió adquirir una visión global del ciclo de vida de proyectos tecnológicos en entornos corporativos, decidiendo posteriormente orientar mi carrera hacia equipos más pequeños, donde pudiera tener mayor impacto directo en el desarrollo.",
-        //     technologies: [
-        //         "Quality Assurance",
-        //         "Documentación Técnica",
-        //         "Presentaciones Ejecutivas",
-        //         "Consultoría Tecnológica",
-        //     ],
-        //     image: "/company_logo/kpmg.png",
-        // },
+        {
+            title: "Analista en Prácticas",
+            company: "KPMG",
+            period: "Mar. 2023 - Ago. 2023",
+            description:
+                "Colaboración con el departamento de Estrategia (Technology Enablement) participando en proyectos de desarrollo y transformación digital para clientes corporativos. Esta experiencia me permitió adquirir una visión global del ciclo de vida de proyectos tecnológicos en entornos corporativos, decidiendo posteriormente orientar mi carrera hacia equipos más pequeños, donde pudiera tener mayor impacto directo en el desarrollo.",
+            technologies: [
+                "Quality Assurance",
+                "Documentación Técnica",
+                "Presentaciones Ejecutivas",
+                "Consultoría Tecnológica",
+            ],
+            image: "/company_logo/kpmg.png",
+        },
         {
             title: "Ingeniero de Investigación en Visión Artificial",
             company: "Universidad de Valladolid (UVa)",
@@ -59,14 +59,14 @@ export default function Home() {
             image: "/projects_logo/blockheadapp.png",
             domain: "https://blockheadapp.com",
         },
-        // {
-        //     image: "/projects_logo/blockheadapp.png",
-        //     domain: "https://taskmanager.goyocancio.es",
-        // },
-        // {
-        //     image: "/projects_logo/blockheadapp.png",
-        //     domain: "https://travelblog.goyocancio.es",
-        // },
+        {
+            image: "/projects_logo/blockheadapp.png",
+            domain: "https://taskmanager.goyocancio.es",
+        },
+        {
+            image: "/projects_logo/blockheadapp.png",
+            domain: "https://travelblog.goyocancio.es",
+        },
         // {
         //     image: "/projects_logo/blockheadapp.png",
         //     domain: "https://weatherapp.goyocancio.es",
