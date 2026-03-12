@@ -71,25 +71,25 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HERO-01 | — | Pending |
-| HERO-02 | — | Pending |
-| HERO-03 | — | Pending |
-| HERO-04 | — | Pending |
-| DSGN-01 | — | Pending |
-| DSGN-02 | — | Pending |
-| DSGN-03 | — | Pending |
-| COUR-01 | — | Pending |
-| COUR-02 | — | Pending |
-| CHAN-01 | — | Pending |
-| EXPR-01 | — | Pending |
-| PROJ-01 | — | Pending |
-| I18N-01 | — | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-02 | Phase 2 | Pending |
+| HERO-03 | Phase 2 | Pending |
+| HERO-04 | Phase 2 | Pending |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Pending |
+| DSGN-03 | Phase 1 | Pending |
+| COUR-01 | Phase 3 | Pending |
+| COUR-02 | Phase 3 | Pending |
+| CHAN-01 | Phase 3 | Pending |
+| EXPR-01 | Phase 4 | Pending |
+| PROJ-01 | Phase 4 | Pending |
+| I18N-01 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 13 total
-- Mapped to phases: 0
-- Unmapped: 13 ⚠️
+- Mapped to phases: 13
+- Unmapped: 0 — full coverage
 
 ---
 *Requirements defined: 2026-03-12*
-*Last updated: 2026-03-12 after initial definition*
+*Last updated: 2026-03-12 after roadmap creation*
