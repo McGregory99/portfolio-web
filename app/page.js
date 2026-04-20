@@ -1,147 +1,91 @@
-import Header from "./components/Header";
-import ExperienceItem from "./components/ExperienceItem";
-import ProjectItem from "./components/ProjectItem";
+import Image from "next/image";
+import Link from "next/link";
+
+const socialLinks = [
+    { name: "LinkedIn", icon: "/social/linkedin.svg", url: "https://linkedin.com/in/goyocancio" },
+    { name: "GitHub", icon: "/social/github.svg", url: "https://github.com/McGregory99" },
+    { name: "X", icon: "/social/x.svg", url: "https://x.com/goyo_is_a_dev" },
+    { name: "YouTube", icon: "/social/youtube.svg", url: "https://www.youtube.com/@goyo_is_a_dev" },
+    { name: "TikTok", icon: "/social/tiktok.svg", url: "https://www.tiktok.com/@goyo.dev" },
+];
+
+const sections = [
+    {
+        href: "/cv",
+        title: "CV",
+        description: "Mi experiencia laboral como Software Engineer.",
+        emoji: "💼",
+    },
+    {
+        href: "/creador",
+        title: "Creador",
+        description: "Contenido sobre desarrollo en YouTube, TikTok e Instagram.",
+        emoji: "🎬",
+    },
+    {
+        href: "/proyectos",
+        title: "Proyectos",
+        description: "Proyectos personales y trabajos realizados para clientes.",
+        emoji: "🚀",
+    },
+];
 
 export default function Home() {
-    // Data for work experiences
-    const experiences = [
-        {
-            title: "Software Engineer & Data Analyst",
-            company: "GRASP SPAIN",
-            period: "Sep. 2023 - Presente",
-            description: "",
-            // "Desarrollo de una aplicación web para la generación de medidas sintéticas de satélites en el marco de un proyecto NEOTEC financiado por el CDTI. Responsable de varias tareas de preparación y procesamiento de datos satelitales críticos para la observación terrestre, implementando soluciones técnicas innovadoras que optimizan la calidad y utilidad de la información geoespacial obtenida.",
-            projects: [
-                "Simulador de medidas de instrumentos satelitales",
-                "Preparacion de cadenas de procesado para datos geoespaciales (S5P, OLCI...)",
-            ],
-            technologies: ["Python", "Remote Sensing", "Streamlit", "Docker"],
-            image: "/company_logo/grasp.png",
-        },
-        // {
-        //     title: "Analista en Prácticas",
-        //     company: "KPMG",
-        //     period: "Mar. 2023 - Ago. 2023",
-        //     description:
-        //         "Colaboración con el departamento de Estrategia (Technology Enablement) participando en proyectos de desarrollo y transformación digital para clientes corporativos. Esta experiencia me permitió adquirir una visión global del ciclo de vida de proyectos tecnológicos en entornos corporativos, decidiendo posteriormente orientar mi carrera hacia equipos más pequeños, donde pudiera tener mayor impacto directo en el desarrollo.",
-        //     technologies: [
-        //         "Quality Assurance",
-        //         "Documentación Técnica",
-        //         "Presentaciones Ejecutivas",
-        //         "Consultoría Tecnológica",
-        //     ],
-        //     image: "/company_logo/kpmg.png",
-        // },
-        {
-            title: "Ingeniero de Investigación en Visión Artificial",
-            company: "Universidad de Valladolid (UVa)",
-            period: "Nov. 2021 - Mar. 2023",
-            description: "",
-            projects: [
-                "Sistema de prevencion de roturas en cintas transportadoras",
-                "Prototipo contador de visitantes para eventos en espacios abiertos",
-            ],
-            technologies: [
-                "Python",
-                "Computer Vision",
-                "IoT",
-                // "Inteligencia Artificial",
-                // "Ciencia de Datos",
-                "Machine Learning",
-            ],
-            image: "/company_logo/uva.png",
-        },
-    ];
-
-    // Sample project data
-    const projects = [
-        {
-            image: "/projects_logo/blockheadapp.png",
-            domain: "https://blockheadapp.com",
-        },
-        // {
-        //     image: "/projects_logo/blockheadapp.png",
-        //     domain: "https://taskmanager.goyocancio.es",
-        // },
-        // {
-        //     image: "/projects_logo/blockheadapp.png",
-        //     domain: "https://travelblog.goyocancio.es",
-        // },
-        // {
-        //     image: "/projects_logo/blockheadapp.png",
-        //     domain: "https://weatherapp.goyocancio.es",
-        // },
-        // {
-        //     image: "/projects_logo/blockheadapp.png",
-        //     domain: "https://portfolio.goyocancio.es",
-        // },
-    ];
-
     return (
-        <div className="flex flex-col max-w-screen-md mx-auto">
-            <Header />
-
-            {/* Work Experience Section*/}
-            <section id="experience">
-                <div className="container mx-auto py-12">
-                    <div className="text-center">
-                        <h2 className="text-2xl md:text-4xl font-bold">
-                            Experiencia Laboral
-                        </h2>
-                    </div>
-
-                    <div className="space-y-8">
-                        {experiences.map((experience, index) => (
-                            <ExperienceItem
-                                key={index}
-                                experience={experience}
+        <div className="max-w-screen-md mx-auto px-4 py-16 flex flex-col items-center gap-12">
+            {/* Hero */}
+            <div className="flex flex-col items-center gap-6 text-center">
+                <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-white shadow-xl">
+                    <Image
+                        src="/profile.png"
+                        alt="Foto de perfil de Goyo Cancio"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                </div>
+                <div>
+                    <h1 className="text-3xl md:text-5xl font-bold">Goyo Cancio</h1>
+                    <p className="mt-2 text-base md:text-xl text-foreground/60">
+                        Software Engineer & Creador de Contenido
+                    </p>
+                </div>
+                <div className="flex items-center gap-4">
+                    {socialLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={link.name}
+                            className="transition-transform hover:scale-110"
+                        >
+                            <Image
+                                src={link.icon}
+                                alt={link.name}
+                                width={24}
+                                height={24}
+                                className="w-6 h-6 md:w-7 md:h-7"
                             />
-                        ))}
-                    </div>
+                        </Link>
+                    ))}
                 </div>
-            </section>
+            </div>
 
-            {/* Projects Section */}
-            <section id="projects">
-                <div className="container mx-auto py-12 px-10">
-                    <div className="text-center mb-6">
-                        <h2 className="text-2xl md:text-4xl font-bold">
-                            Proyectos Personales
-                        </h2>
-                    </div>
-
-                    <p className="text-xs md:text-base mb-2 text-justify">
-                        De manera paralela a los trabajos que he ido
-                        desempeñando, he desarrollado varios proyectos
-                        personales tanto para probarme a mí mismo y ver de qué
-                        soy capaz, como para aplicar mis conocimientos y
-                        aprender nuevas tecnologías.
-                    </p>
-                    <p className="text-xs md:text-base mb-8  text-justify">
-                        Aquí puedes ver algunos de ellos:
-                    </p>
-
-                    {/* Projects row */}
-                    <div className="flex flex-wrap gap-6 md:gap-8 justify-center">
-                        {/* Restore the map */}
-                        {projects.map((project, index) => {
-                            if (!project || !project.image || !project.domain) {
-                                return null; // Keep the check and null return
-                            }
-                            return (
-                                <div key={index} className="">
-                                    <ProjectItem project={project} />
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
-
-            <footer className="text-center text-xs md:text-sm text-gray-500">
-                © {new Date().getFullYear()} Goyo Cancio. Todos los derechos
-                reservados.
-            </footer>
+            {/* Quick access cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                {sections.map((section) => (
+                    <Link
+                        key={section.href}
+                        href={section.href}
+                        className="bg-gradient-to-br from-white via-gray-100 to-gray-200 border border-gray-200 rounded-2xl p-6 shadow-md hover:-translate-y-1 transition-transform flex flex-col gap-2"
+                    >
+                        <span className="text-2xl">{section.emoji}</span>
+                        <h2 className="font-bold text-lg">{section.title}</h2>
+                        <p className="text-sm text-foreground/60">{section.description}</p>
+                    </Link>
+                ))}
+            </div>
         </div>
     );
 }
