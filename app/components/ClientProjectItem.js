@@ -2,42 +2,38 @@ export default function ClientProjectItem({ project }) {
     const { name, client, description, technologies, videoUrl } = project;
 
     return (
-        <div className="bg-gradient-to-br from-white via-gray-100 to-gray-200 border border-gray-200 rounded-2xl p-6 shadow-md hover:-translate-y-1 transition-transform flex flex-col gap-4">
-            <div>
-                <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-1">
-                    {client}
-                </p>
-                <h3 className="text-lg font-bold">{name}</h3>
-                <p className="text-sm text-foreground/70 mt-2 text-justify">{description}</p>
-            </div>
-
-            <div className="aspect-video w-full rounded-xl overflow-hidden bg-gray-100 border border-gray-200 flex items-center justify-center">
+        <div className="group border border-border rounded-xl overflow-hidden bg-surface hover:border-accent/30 transition-all duration-300">
+            <div className="aspect-video w-full bg-surface-2 border-b border-border flex items-center justify-center relative overflow-hidden">
                 {videoUrl ? (
-                    <video
-                        src={videoUrl}
-                        controls
-                        className="w-full h-full object-cover"
-                    />
+                    <video src={videoUrl} controls className="w-full h-full object-cover" />
                 ) : (
-                    <div className="flex flex-col items-center gap-2 text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <div className="flex flex-col items-center gap-3 text-muted">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.362a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
                         </svg>
-                        <span className="text-sm">Vídeo próximamente</span>
+                        <span className="text-[10px] tracking-widest uppercase opacity-40">Vídeo próximamente</span>
                     </div>
                 )}
             </div>
 
-            <div className="flex flex-wrap gap-2">
-                {technologies.map((tech) => (
-                    <span
-                        key={tech}
-                        className="text-xs px-3 py-1 rounded-full bg-foreground text-accent font-medium"
+            <div className="p-6 flex flex-col gap-3">
+                <div>
+                    <p className="text-[10px] tracking-widest uppercase text-accent/70 mb-1">{client}</p>
+                    <h3
+                        className="text-lg font-bold text-foreground"
+                        style={{ fontFamily: "var(--font-playfair)" }}
                     >
-                        {tech}
-                    </span>
-                ))}
+                        {name}
+                    </h3>
+                    <p className="text-xs text-muted leading-relaxed mt-2">{description}</p>
+                </div>
+                <div className="flex flex-wrap gap-2 pt-1">
+                    {technologies.map((tech) => (
+                        <span key={tech} className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded border border-border text-accent/70 bg-surface-2">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     );

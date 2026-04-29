@@ -1,20 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-    /* Custom color palette - Renamed for clarity */
-    --color-background: #e6e6e6;
-    --color-foreground: #313132;
-    --color-accent: #e2b44f;
-    --color-muted-foreground: #696762;
-    --color-muted: #d3d4d4;
+    --color-background: #f5f1ea;
+    --color-surface: #ffffff;
+    --color-surface-2: #ede8df;
+    --color-foreground: #1c1916;
+    --color-muted: #8c7e70;
+    --color-accent: #b8882e;
+    --color-accent-dim: #8a6520;
+    --color-border: #ddd5c5;
 
-    /* You can add other theme variables here */
+    --font-display: var(--font-playfair);
+    --font-mono: var(--font-ibm-mono);
 }
 
-/* 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    // Updated background and text colors using new variable names 
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: #f5f1ea;
+    color: #1c1916;
+    font-family: var(--font-ibm-mono), 'Courier New', monospace;
+    background-image:
+        radial-gradient(ellipse at 15% 40%, #ede4d0 0%, transparent 60%),
+        radial-gradient(ellipse at 85% 70%, #f0ead8 0%, transparent 55%);
+    min-height: 100vh;
 }
-*/
+
+/* Film grain overlay */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.022;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f5f1ea; }
+::-webkit-scrollbar-thumb { background: #ddd5c5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b8882e; }
+
+/* Selection */
+::selection { background: #b8882e; color: #f5f1ea; }

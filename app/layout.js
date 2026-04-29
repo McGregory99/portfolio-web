@@ -1,16 +1,20 @@
-import { Inter, Geist_Mono } from "next/font/google";
+import { Playfair_Display, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 
-const inter = Inter({
+const playfair = Playfair_Display({
     subsets: ["latin"],
-    variable: "--font-inter",
+    variable: "--font-playfair",
     display: "swap",
+    weight: ["400", "700", "900"],
+    style: ["normal", "italic"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const ibmMono = IBM_Plex_Mono({
     subsets: ["latin"],
+    variable: "--font-ibm-mono",
+    display: "swap",
+    weight: ["300", "400", "500", "600"],
 });
 
 export const metadata = {
@@ -22,13 +26,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="es">
-            <body
-                className={`${inter.variable} ${geistMono.variable} antialiased bg-gradient-to-b from-[#fafafc] via-[#e2e2e2] to-[#cbd5e1] min-h-screen`}
-            >
+            <body className={`${playfair.variable} ${ibmMono.variable}`}>
                 <Nav />
                 {children}
-                <footer className="text-center text-xs md:text-sm text-gray-500 py-8">
-                    © {new Date().getFullYear()} Goyo Cancio. Todos los derechos reservados.
+                <footer className="text-center text-xs text-muted py-10 border-t border-border mt-16 font-mono tracking-widest uppercase">
+                    © {new Date().getFullYear()} Goyo Cancio
                 </footer>
             </body>
         </html>

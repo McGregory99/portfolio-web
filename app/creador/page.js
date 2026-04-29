@@ -3,24 +3,32 @@ import { channels } from "../lib/channels";
 
 export const metadata = {
     title: "Creador | Goyo Cancio",
-    description: "Contenido sobre desarrollo de software en YouTube, TikTok e Instagram.",
+    description: "Contenido sobre desarrollo en YouTube, TikTok e Instagram.",
 };
 
 export default function CreadorPage() {
     return (
-        <div className="max-w-screen-md mx-auto px-4 py-12">
-            <div className="text-center mb-10">
-                <h1 className="text-3xl md:text-5xl font-bold">Creador de Contenido</h1>
-                <p className="mt-3 text-sm md:text-base text-foreground/60 max-w-lg mx-auto">
-                    Comparto mi experiencia como desarrollador a través de contenido corto y largo.
-                    Desde tutoriales en profundidad hasta tips rápidos del día a día.
+        <main className="max-w-screen-md mx-auto px-6 py-20">
+            <header className="mb-14">
+                <p className="text-xs tracking-widest uppercase text-muted mb-3">02 —</p>
+                <h1
+                    className="text-5xl md:text-7xl font-black text-foreground leading-none"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                    Creador de<br />
+                    <span className="italic text-accent">Contenido.</span>
+                </h1>
+                <div className="w-12 h-px bg-accent mt-8 mb-8" />
+                <p className="text-xs text-muted leading-relaxed max-w-md">
+                    Comparto mi experiencia como desarrollador a través de contenido corto y largo —
+                    desde tutoriales técnicos en profundidad hasta tips del día a día.
                 </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {channels.map((channel) => (
-                    <SocialChannelCard key={channel.platform} channel={channel} />
+            </header>
+            <div className="flex flex-col gap-3">
+                {channels.map((ch) => (
+                    <SocialChannelCard key={ch.platform} channel={ch} />
                 ))}
             </div>
-        </div>
+        </main>
     );
 }

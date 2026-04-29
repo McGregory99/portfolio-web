@@ -2,38 +2,41 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function SocialChannelCard({ channel }) {
-    const { platform, handle, url, icon, description, color, textColor } = channel;
+    const { platform, handle, url, icon, description, color } = channel;
 
     return (
-        <div
-            className="rounded-2xl p-6 flex flex-col gap-4 shadow-lg hover:-translate-y-1 transition-transform"
-            style={{ backgroundColor: color, color: textColor }}
-        >
-            <div className="flex items-center gap-3">
-                <div className="w-8 h-8 flex-shrink-0">
-                    <Image
-                        src={icon}
-                        alt={platform}
-                        width={32}
-                        height={32}
-                        className="w-8 h-8"
-                        style={{ filter: "brightness(0) invert(1)" }}
-                    />
-                </div>
+        <div className="flex rounded-xl overflow-hidden border border-border h-28 hover:-translate-y-0.5 transition-transform duration-200">
+            <div className="flex items-center justify-center gap-3 px-8 flex-shrink-0 w-52" style={{ backgroundColor: color }}>
+                <Image
+                    src={icon}
+                    alt={platform}
+                    width={28}
+                    height={28}
+                    className="w-7 h-7"
+                    style={{ filter: "brightness(0) invert(1)" }}
+                />
                 <div>
-                    <p className="font-bold text-lg leading-none">{platform}</p>
-                    <p className="text-sm opacity-80">{handle}</p>
+                    <p
+                        className="font-bold text-white text-lg leading-none"
+                        style={{ fontFamily: "var(--font-playfair)" }}
+                    >
+                        {platform}
+                    </p>
+                    <p className="text-white/70 text-xs mt-0.5">{handle}</p>
                 </div>
             </div>
-            <p className="text-sm opacity-90 flex-1">{description}</p>
-            <Link
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block text-center text-sm font-semibold py-2 px-4 rounded-lg bg-white/20 hover:bg-white/30 transition-colors"
-            >
-                Sígueme
-            </Link>
+            <div className="flex items-center justify-between flex-1 px-6 bg-surface gap-4">
+                <p className="text-xs text-muted leading-relaxed">{description}</p>
+                <Link
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 text-xs tracking-widest uppercase px-4 py-2 rounded border transition-colors hover:bg-foreground hover:text-background"
+                    style={{ borderColor: color, color }}
+                >
+                    Seguir →
+                </Link>
+            </div>
         </div>
     );
 }

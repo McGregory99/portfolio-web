@@ -5,44 +5,49 @@ import { clientProjects } from "../lib/clientProjects";
 
 export const metadata = {
     title: "Proyectos | Goyo Cancio",
-    description: "Proyectos personales y trabajos para clientes desarrollados por Goyo Cancio.",
+    description: "Proyectos personales y trabajos para clientes de Goyo Cancio.",
 };
 
 export default function ProyectosPage() {
     return (
-        <div className="max-w-screen-md mx-auto px-4 py-12">
-            <div className="text-center mb-12">
-                <h1 className="text-3xl md:text-5xl font-bold">Proyectos</h1>
-                <p className="mt-3 text-sm md:text-base text-foreground/60">
-                    Proyectos personales y trabajos realizados para clientes.
-                </p>
-            </div>
+        <main className="max-w-screen-md mx-auto px-6 py-20">
+            <header className="mb-14">
+                <p className="text-xs tracking-widest uppercase text-muted mb-3">03 —</p>
+                <h1
+                    className="text-5xl md:text-7xl font-black text-foreground leading-none"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                    Proyectos<br />
+                    <span className="italic text-accent">& Clientes.</span>
+                </h1>
+                <div className="w-12 h-px bg-accent mt-8" />
+            </header>
 
             {/* Proyectos personales */}
             <section className="mb-16">
-                <h2 className="text-xl md:text-2xl font-bold mb-2">Proyectos Personales</h2>
-                <p className="text-sm text-foreground/60 mb-8">
-                    Proyectos desarrollados para aprender, experimentar y construir productos propios.
-                </p>
-                <div className="flex flex-wrap gap-6 justify-center">
-                    {projects.map((project, index) => (
-                        <ProjectItem key={index} project={project} />
+                <div className="flex items-center gap-4 mb-8">
+                    <p className="text-xs tracking-widest uppercase text-muted">Personales</p>
+                    <div className="flex-1 h-px bg-border" />
+                </div>
+                <div className="flex flex-wrap gap-8 justify-start">
+                    {projects.map((p, i) => (
+                        <ProjectItem key={i} project={p} />
                     ))}
                 </div>
             </section>
 
             {/* Proyectos para clientes */}
             <section>
-                <h2 className="text-xl md:text-2xl font-bold mb-2">Proyectos para Clientes</h2>
-                <p className="text-sm text-foreground/60 mb-8">
-                    Soluciones desarrolladas a medida para empresas y emprendedores.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {clientProjects.map((project, index) => (
-                        <ClientProjectItem key={index} project={project} />
+                <div className="flex items-center gap-4 mb-8">
+                    <p className="text-xs tracking-widest uppercase text-muted">Clientes</p>
+                    <div className="flex-1 h-px bg-border" />
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {clientProjects.map((p, i) => (
+                        <ClientProjectItem key={i} project={p} />
                     ))}
                 </div>
             </section>
-        </div>
+        </main>
     );
 }

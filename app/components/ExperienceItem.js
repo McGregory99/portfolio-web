@@ -1,76 +1,44 @@
 import Image from "next/image";
 
-/**
- * ExperienceItem component
- * Displays a single work experience block with image, title, description and technologies
- */
 export default function ExperienceItem({ experience }) {
-    const {
-        title,
-        company,
-        period,
-        description,
-        projects,
-        technologies,
-        image,
-    } = experience;
+    const { title, company, period, projects, technologies, image } = experience;
 
     return (
-        <div className="flex flex-row gap-6 m-5 px-5 py-3 md:my-10 md:px-8 md:py-6 rounded-2xl shadow-2xl hover:shadow-lg hover:-translate-y-1 bg-gradient-to-br from-white via-gray-100 to-gray-200 border border-gray-200">
-            {/* Company/Job image - rounded and positioned at the top left */}
-            <div className="flex-shrink-0">
-                <div className="relative w-12 h-12 md:w-24 md:h-24 rounded-lg md:rounded-2xl overflow-hidden">
-                    <Image
-                        src={image}
-                        alt={`${company} logo`}
-                        fill
-                        className=""
-                    />
+        <div className="group border border-border rounded-xl p-6 md:p-8 bg-surface hover:border-accent/30 transition-all duration-300">
+            <div className="flex gap-5 items-start">
+                <div className="relative w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-lg overflow-hidden border border-border bg-surface-2">
+                    <Image src={image} alt={`${company} logo`} fill className="object-contain p-1.5" />
                 </div>
-            </div>
-
-            {/* Text block on the right */}
-            <div className="flex-grow">
-                {/* Job title and company name */}
-                <div className="mb-5 md:mt-5">
-                    <h3 className="text-sm md:text-xl font-bold">{title}</h3>
-                    <div className="flex justify-between md:flex-wrap flex-col md:flex-row">
-                        <p className="text-xs md:text-xl">{company}</p>
-                        <p className="text-xs md:text-lg text-gray-500">
-                            {period}
-                        </p>
+                <div className="flex-1 min-w-0">
+                    <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-4">
+                        <div>
+                            <h3
+                                className="text-lg md:text-xl font-bold text-foreground"
+                                style={{ fontFamily: "var(--font-playfair)" }}
+                            >
+                                {title}
+                            </h3>
+                            <p className="text-accent text-sm tracking-wide">{company}</p>
+                        </div>
+                        <p className="text-xs text-muted tracking-widest uppercase flex-shrink-0">{period}</p>
                     </div>
-                </div>
 
-                {/* Description */}
-                <p className="mb-6 text-xs md:text-base text-justify">
-                    {description}
-                </p>
-
-                {/* Projects list */}
-                {projects && projects.length > 0 && (
-                    <div className="mb-2 md:mb-6">
-                        <h4 className="text-xs font-semibold mb-2 md:text-base">
-                            Proyectos:
-                        </h4>
-                        <ul className="list-disc pl-5 text-xs md:text-base">
-                            {projects.map((project, index) => (
-                                <li key={index} className="">
+                    {projects && projects.length > 0 && (
+                        <ul className="mb-5 space-y-1.5">
+                            {projects.map((project, i) => (
+                                <li key={i} className="flex items-start gap-2 text-xs text-muted leading-relaxed">
+                                    <span className="text-accent/60 mt-0.5 flex-shrink-0">→</span>
                                     {project}
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                )}
+                    )}
 
-                {/* Technologies list */}
-                <div>
-                    {/* <h4 className="text-sm font-semibold mb-2">Tecnologías:</h4> */}
                     <div className="flex flex-wrap gap-2">
-                        {technologies.map((tech, index) => (
+                        {technologies.map((tech) => (
                             <span
-                                key={index}
-                                className="bg-foreground text-accent rounded-full px-2 md:px-4 py-1 text-[10px] md:text-sm font-bold"
+                                key={tech}
+                                className="text-[10px] tracking-widest uppercase px-2.5 py-1 rounded border border-border text-accent/70 bg-surface-2"
                             >
                                 {tech}
                             </span>
