@@ -6,25 +6,24 @@ export const experiences = [
         description:
             "Desarrollo de soluciones de software para procesamiento y análisis de datos de teledetección. Trabajo en el diseño e implementación de herramientas de visualización y pipelines de datos.",
         projects: [
-            "Desarrollo de aplicaciones web con Streamlit para visualización de datos geoespaciales",
-            "Implementación de pipelines de procesamiento de datos con Python",
-            "Containerización de aplicaciones con Docker",
+            "Desarrollo de software de simulación de medidas satelitales para la generación de datasets personalizados (proyecto NEOTEC)",
+            "Diseño de pipelines ETL para extracción, análisis y transformación de datos geoespaciales",
+            "Procesamiento masivo de datos geoespaciales para proyectos de investigación europeos",
         ],
         technologies: ["Python", "Remote Sensing", "Streamlit", "Docker"],
         image: "/company_logo/grasp.png",
     },
     {
-        title: "Investigador",
+        title: "Ingeniero de Investigación",
         company: "Universidad de Valladolid",
         period: "Nov 2021 - Mar 2023",
-        description:
-            "Investigación en el área de visión por computador e IoT, desarrollando soluciones basadas en machine learning para aplicaciones industriales.",
         projects: [
-            "Desarrollo de modelos de Computer Vision para detección de objetos",
-            "Implementación de sistemas IoT para monitorización industrial",
-            "Aplicación de técnicas de Machine Learning en entornos de producción",
+            "Sistema de detección de anomalías en cintas transportadoras mediante Computer Vision",
+            "Algoritmos de IA para anticipar averías antes de que ocurran",
+            "Contador de visitantes para eventos en exteriores usando visión artificial",
+            "Integración de múltiples componentes IoT en una solución eficiente e innovadora",
         ],
-        technologies: ["Python", "Computer Vision", "IoT", "Machine Learning"],
+        technologies: ["Python", "Computer Vision", "Machine Learning", "IoT", "Data Science"],
         image: "/company_logo/uva.png",
     },
 ];
